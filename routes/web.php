@@ -15,16 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Configurando rota para o controller via Get, será enviado array para o metodo @index.
+Route::get('/contato/{id?}', ['uses'=>'ContatoController@index']);
+
 //Essa rota foi criada para testar o recebimento via Post
 Route::post('/contato', function (){
     //var_dump($_POST);
     dd($_POST);
     return "Contato POST";
-});
-
-//Essa rota foi criada para testar o recebimento via Get
-Route::get('/contato/{id?}', function ($id=null){
-    return "Contato GET";
 });
 
 //Essa rota foi criada para testar o recebimento via Put
