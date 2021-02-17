@@ -1,10 +1,7 @@
-# ###########################################################################
-# Esse é um arquivo pessoal onde irei registrar alguns comandos importantes #
-# ###########################################################################
+# Esse é um arquivo pessoal onde irei registrar alguns comandos importantes 
 
-=============================================================================
-Preparando ambiente de trabalho
-=============================================================================
+-- Preparando ambiente de trabalho --
+
 
 # instalar o docker, docker-compose e git
 sudo apt-get install docker docker-compose git
@@ -40,9 +37,8 @@ hosts para criar o direcionamento...)
 # Iniciar os containers
 docker-compose up -d nginx phpmyadmin mysql
 
-=============================================================================
-Comandos para o Github
-=============================================================================
+-- Comandos para o Github --
+
 1º Criei o repositório no Github, atribui o tipo de licença e configurei o gitignore.
 2º Executei os comandos no meu computador:
 	git clone https://github.com/LucinoGonzaga/curso_laravel_5.3.git
@@ -52,9 +48,8 @@ Comandos para o Github
 	git status
 	git push
 
-=============================================================================
-Cursos do professor professor Guilherme Ferreira
-=============================================================================
+-- Cursos do professor professor Guilherme Ferreira --
+
 Aula 2 - Instalação e configuração:
 Um dos arquivos principais é o .env onde define o banco de dados, configurações de e-mail.
 
@@ -69,9 +64,9 @@ No diretório public é onde o servidor vai exibir para o usuário.
 	
 Aula 5 - Artisan Console
 php artisan -V 		:	 visualizar versão do framework php
-=============================================================================
-Comandos para o Docker:
-=============================================================================
+
+-- Comandos para o Docker --
+
 # Visualiza os containers em execução
 sudo docker container ls
 
