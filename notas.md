@@ -1,7 +1,10 @@
-# Esse é um arquivo pessoal onde irei registrar alguns comandos importantes 
+# ###########################################################################
+# Esse é um arquivo pessoal onde irei registrar alguns comandos importantes #
+# ###########################################################################
 
--- Preparando ambiente de trabalho --
-
+=============================================================================
+Preparando ambiente de trabalho
+=============================================================================
 
 # instalar o docker, docker-compose e git
 sudo apt-get install docker docker-compose git
@@ -37,19 +40,33 @@ hosts para criar o direcionamento...)
 # Iniciar os containers
 docker-compose up -d nginx phpmyadmin mysql
 
--- Comandos para o Github --
+# Se necessario criar banco postgres
+sudo docker run --name postbanco -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
 
+# Acessar banco através do terminal
+docker exec -it postbanco psql -U postgres --password
+
+
+=============================================================================
+Comandos para o Github
+=============================================================================
 1º Criei o repositório no Github, atribui o tipo de licença e configurei o gitignore.
 2º Executei os comandos no meu computador:
-	git clone https://github.com/LucinoGonzaga/curso_laravel_5.3.git
-	git status
-	git add .
-	git commit -m “mensagem necessária”
-	git status
-	git push
+Criar diretório do projeto:		mkdir projeto...
+Clonar o projeto:			git clone https://github.com/LucinoGonzaga/curso_laravel_5.3.git
+Mudar para branch MAIN: 		git checkout main
+Atualizar branch MAIN:			git pull origin master
+Criar branch:				git checkout -b qualquer-nome
+Exibir modificações			git status
+Adicionar alterações			git add nome_do_arquivo
+Adicionar alterações			git add .
+Comentando o pacote			git commit -m “mensagem”
+Enviar	branch para o servidor		git push
 
--- Cursos do professor professor Guilherme Ferreira --
 
+=============================================================================
+Cursos do professor professor Guilherme Ferreira
+=============================================================================
 Aula 2 - Instalação e configuração:
 Um dos arquivos principais é o .env onde define o banco de dados, configurações de e-mail.
 
@@ -64,9 +81,9 @@ No diretório public é onde o servidor vai exibir para o usuário.
 	
 Aula 5 - Artisan Console
 php artisan -V 		:	 visualizar versão do framework php
-
--- Comandos para o Docker --
-
+=============================================================================
+Comandos para o Docker:
+=============================================================================
 # Visualiza os containers em execução
 sudo docker container ls
 
